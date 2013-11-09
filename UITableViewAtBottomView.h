@@ -10,18 +10,12 @@
 
 @protocol UITableViewAtBottomViewDelegate;
 
-@interface UITableViewAtBottomView : UIView
-
+@interface UITableViewAtBottomView : NSObject
 - (id)initWithTableView:(UITableView *)tableView delegate:(id<UITableViewAtBottomViewDelegate>)delegate;
-
 @end
 
 @protocol UITableViewAtBottomViewDelegate <NSObject>
-
 @optional
-
 - (BOOL)tableViewCanBottom:(UITableView *)view;
-
 - (void)tableViewDidBottom:(UITableView *)view;
-
 @end
